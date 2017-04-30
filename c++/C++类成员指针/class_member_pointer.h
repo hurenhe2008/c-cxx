@@ -61,8 +61,9 @@ void use_member_function()
 
 void use_member_data()
 {
+    /* _data1 == 0x00000000 */
     int TestClass::*_data1 = &TestClass::m_data1;
-
+    /* _datat2 == 0x00000000 */
     double TestClass::*_data2 = &TestClass::m_data2;
 
     TestClass a;

@@ -19,7 +19,7 @@ public:
     {
         std::unique_lock<std::mutex> lock(mutex_);
         --count_;
-        if (count_ < 0)
+        while (count_ < 0)
             cnd_.wait(lock);
     }
 
